@@ -12,7 +12,7 @@ describe('Testing API Delete User', async() => {
         let payloadCreateUser = data.dataCreateUser();
 
         //hit API and store response body into variable
-        let responseCreateUser = await api.createUser(payloadCreateUser);
+        const responseCreateUser = await api.createUser(payloadCreateUser);
         idUser = responseCreateUser.body.id;
 
         //assert the exist id
@@ -21,7 +21,7 @@ describe('Testing API Delete User', async() => {
 
    it('Positive Case | Delete User successfully', async() => {
         //hit API delete user
-        let responseDeleteUser = await api.deleteUser(idUser);
+        const responseDeleteUser = await api.deleteUser(idUser);
         
         /**
          * assertions
@@ -35,7 +35,7 @@ describe('Testing API Delete User', async() => {
 
    it('Negative Case | Delete User with wrong user id', async() => {
         //hit API delete user
-        let responseDeleteUser = await api.deleteUser("123456-abcd");
+        const responseDeleteUser = await api.deleteUser("123456-abcd");
 
         /**
          * assertions
@@ -50,7 +50,7 @@ describe('Testing API Delete User', async() => {
 
    it('Negative Case | Delete User without User Id', async() => {
     //hit API delete user
-        let responseDeleteUser = await api.deleteUser("");
+        const responseDeleteUser = await api.deleteUser("");
 
         /**
          * assertions
@@ -65,7 +65,7 @@ describe('Testing API Delete User', async() => {
 
     it('Verify Deleted User Id', async() => {
         //hit the API
-        let responseGetDetailUser = await api.getDetailUser(idUser);
+        const responseGetDetailUser = await api.getDetailUser(idUser);
 
         /**
          * assertions

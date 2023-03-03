@@ -17,7 +17,7 @@ describe('Testing API Create User', async() => {
         let payloadCreateUser = data.dataCreateUser();
 
         //store the response body into variable
-        let responseCreateUser = await api.createUser(payloadCreateUser);
+        const responseCreateUser = await api.createUser(payloadCreateUser);
         idUser = responseCreateUser.body.id;
 
         /**
@@ -35,7 +35,7 @@ describe('Testing API Create User', async() => {
         payloadCreateUser.phone_number = "";
 
         //store the response body into variable
-        let responseCreateUser = await api.createUser(payloadCreateUser);
+        const responseCreateUser = await api.createUser(payloadCreateUser);
         idUser = responseCreateUser.body.id;
 
         /**
@@ -55,7 +55,7 @@ describe('Testing API Create User', async() => {
         payloadCreateUser.address = "";
 
         //store the response body into variable
-        let responseCreateUser = await api.createUser(payloadCreateUser);
+        const responseCreateUser = await api.createUser(payloadCreateUser);
         idUser = responseCreateUser.body.id
 
         /**
@@ -74,7 +74,7 @@ describe('Testing API Create User', async() => {
         payloadCreateUser.name = 123;
 
         //store the response body into variable
-        let responseCreateUser = await api.createUser(payloadCreateUser);
+        const responseCreateUser = await api.createUser(payloadCreateUser);
         let errorMessage = responseCreateUser.body.message;
 
         /**

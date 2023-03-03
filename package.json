@@ -4,7 +4,7 @@
   "description": "Kuncie Homework API Automation",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha tests/**/*.js"
+    "test": "npx mocha tests/**/*.js --reporter mochawesome"
   },
   "keywords": [
     "API",
