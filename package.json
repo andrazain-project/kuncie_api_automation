@@ -1,0 +1,22 @@
+{
+  "name": "kuncie_api_automation",
+  "version": "1.0.0",
+  "description": "Kuncie Homework API Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha tests/**/*.js"
+  },
+  "keywords": [
+    "API",
+    "Automation"
+  ],
+  "author": "Herdian Chandra",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-json-schema": "^1.5.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "supertest": "^6.3.3"
+  }
+}
