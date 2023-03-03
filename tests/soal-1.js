@@ -5,14 +5,20 @@ const data = require('../data/data-user.js');
 
 describe('Testing API Create User', async() => {
 
+    
     //get the payload
     let payloadCreateUser = data.dataCreateUser();
 
+    let idUser = "";
+
     it('Positive Case | Ensure the Create User API running successfully', async() => {
         
+        //get the payload
+        let payloadCreateUser = data.dataCreateUser();
+
         //store the response body into variable
         let responseCreateUser = await api.createUser(payloadCreateUser);
-        let idUser = responseCreateUser.body.id;
+        idUser = responseCreateUser.body.id;
 
         /**
          * assertions
@@ -30,7 +36,7 @@ describe('Testing API Create User', async() => {
 
         //store the response body into variable
         let responseCreateUser = await api.createUser(payloadCreateUser);
-        let idUser = responseCreateUser.body.id;
+        idUser = responseCreateUser.body.id;
 
         /**
          * assertions
@@ -50,7 +56,7 @@ describe('Testing API Create User', async() => {
 
         //store the response body into variable
         let responseCreateUser = await api.createUser(payloadCreateUser);
-        let idUser = responseCreateUser.body.id
+        idUser = responseCreateUser.body.id
 
         /**
          * assertions
